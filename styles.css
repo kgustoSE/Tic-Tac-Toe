@@ -1,4 +1,4 @@
-@import url(https://fonts.bunny.net/css?family=bakbak-one:400);
+@import url(https://fonts.bunny.net/css?family=aclonica:400|bakbak-one:400);
 
 :root {
     --cell-size: 100px;
@@ -106,4 +106,9 @@ p {
 
 #reset-btn:hover {
     cursor: pointer;
+}
+
+#header {
+    font-family: 'Aclonica', sans-serif;
+    font-size: 4rem;
 }

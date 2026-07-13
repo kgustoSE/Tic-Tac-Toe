@@ -53,6 +53,7 @@ function checkScore() {
             infoBoard.textContent = "Circle Wins!"
             gameOver = true;
             alphaOverlay.style.display = "flex";
+
             btn.style.color = "blue";
 
 
@@ -60,6 +61,7 @@ function checkScore() {
             infoBoard.textContent = "Cross Wins!"
             gameOver = true;
             alphaOverlay.style.display = "flex";
+
             btn.style.color = "red";
         }
 
@@ -75,8 +77,10 @@ function resetGame() {
     gameOver = false;
     alphaOverlay.style.display = "none";
     btn.style.color = "";
+
     createBoard();
 }
+
 //listen to reset game
 btn.addEventListener("click", resetGame);
 
