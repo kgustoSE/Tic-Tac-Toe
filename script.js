@@ -46,6 +46,7 @@ function checkScore() {
         [0, 3, 6], [1, 4, 7], [2, 5, 8],
         [0, 4, 8], [2, 4, 6]
     ]
+    let someoneWon = false;
     winningCombo.forEach(array => {
         const circleWins = array.every(cell => allSquares[cell].firstChild?.classList.contains("circle"))
         const crossWins = array.every(cell => allSquares[cell].firstChild?.classList.contains("cross"))
@@ -53,7 +54,7 @@ function checkScore() {
             infoBoard.textContent = "Circle Wins!"
             gameOver = true;
             alphaOverlay.style.display = "flex";
-
+            someoneWon = true;
             btn.style.color = "blue";
 
 
@@ -61,11 +62,20 @@ function checkScore() {
             infoBoard.textContent = "Cross Wins!"
             gameOver = true;
             alphaOverlay.style.display = "flex";
-
+            someoneWon = true;
             btn.style.color = "red";
         }
 
-    })
+    });
+
+    // check for a draw
+    const boardFull = [...allSquares].every(square => square.firstChild);
+    if (boardFull && !someoneWon) {
+        infoBoard.textContent = "It's a Draw!"
+        gameOver = true;
+        alphaOverlay.style.display = "flex";
+        someoneWon = false;
+    }
 
 
 }
