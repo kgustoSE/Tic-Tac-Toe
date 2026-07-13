@@ -67,5 +67,17 @@ function checkScore() {
 
 
 }
+//reset game
+function resetGame() {
+    gameBoard.innerHTML = "";
+    infoBoard.textContent = "";
+    playerChoice = "circle";
+    gameOver = false;
+    alphaOverlay.style.display = "none";
+    btn.style.color = "";
+    createBoard();
+}
+//listen to reset game
+btn.addEventListener("click", resetGame);
 
 createBoard();
