@@ -1,6 +1,8 @@
 // connect javascript to html & create array
 const gameBoard = document.querySelector("#gameboard");
 const infoBoard = document.querySelector("#info");
+const alphaOverlay = document.querySelector("#alpha");
+const btn = document.querySelector("#reset-btn");
 const createCells = [
     "", "", "",
     "", "", "",
@@ -50,9 +52,15 @@ function checkScore() {
         if (circleWins) {
             infoBoard.textContent = "Circle Wins!"
             gameOver = true;
+            alphaOverlay.style.display = "flex";
+            btn.style.color = "blue";
+
+
         } else if (crossWins) {
             infoBoard.textContent = "Cross Wins!"
             gameOver = true;
+            alphaOverlay.style.display = "flex";
+            btn.style.color = "red";
         }
 
     })

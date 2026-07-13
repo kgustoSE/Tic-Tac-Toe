@@ -1,3 +1,5 @@
+@import url(https://fonts.bunny.net/css?family=bakbak-one:400);
+
 :root {
     --cell-size: 100px;
     --mark-size: calc(var(--cell-size)* 0.9);
@@ -68,4 +70,40 @@ body {
 
 .cross:after {
     transform: rotate(-45deg);
+}
+
+p {
+    font-size: 1.8rem;
+    font-family: 'Bakbak One', display;
+}
+
+#alpha {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#reset-btn {
+    font-family: 'Bakbak One', display;
+    background-color: white;
+    border: none;
+    border-radius: 0.3rem;
+    margin: 1rem;
+    padding: 0.5rem;
+    width: auto;
+    height: auto;
+    font-size: 1.5rem;
+}
+
+#reset-btn:active {
+    transform: translateY(0.2px) scale(0.99);
+}
+
+#reset-btn:hover {
+    cursor: pointer;
 }
